@@ -1,15 +1,11 @@
 const express = require("express");
-const { PrismaClient } = require("@prisma/client");
-
-const prisma = new PrismaClient();
+const kategoriRoute = require("./routes/kategoriRoute");
 
 const app = express();
 
-app.get("/", async (req, res) => {
-    const kategori = await prisma.kategori.findMany();
+app.use(express.json());
 
-    res.json(kategori);
-});
+app.use("/api/kategori", kategoriRoute);
 
 app.listen(3000, () => {
     console.log("Server running on port 3000");
