@@ -1,11 +1,11 @@
 const kategoriService = require("../services/kategoriService");
 
-exports.getAllKategori = async (req, res) => {
-  const data = await kategoriService.getAllKategori();
+exports.getKategori = async (req, res) => {
+  const data = await kategoriService.getKategori();
   res.json(data);
 };
 
-exports.getAllKategoriById = async (req, res) => {
+exports.getKategoriById = async (req, res) => {
     const data = await kategoriService.getKategoriById(req.params.id);
     if(!data){
         return res.status(404).json({

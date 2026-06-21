@@ -2,7 +2,7 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 
-const getAllKategori = async () => {
+const getKategori = async () => {
     return await prisma.kategori.findMany();
 };
 
@@ -43,7 +43,7 @@ const deleteKategori = async (id) => {
 
 
 module.exports = {
-        getAllKategori,
+        getKategori,
         getKategoriById,
         createKategori,
         updateKategori,
