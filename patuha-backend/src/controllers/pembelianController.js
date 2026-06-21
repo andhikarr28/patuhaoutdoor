@@ -17,8 +17,6 @@ exports.getPembelianById = async (req, res) => {
 };
 
 exports.createPembelian = async (req, res) => {
-    console.log(req.body);
-
     const data = await pembelianService.createPembelian(req.body);
 
     res.json(data);

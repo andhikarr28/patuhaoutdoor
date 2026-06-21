@@ -5,6 +5,8 @@ const varianRoute = require("./routes/varianRoute");
 const supplierRoute = require("./routes/supplierRoute");
 const pembelianRoute = require("./routes/pembelianRoute");
 const detailPembelianRoute = require("./routes/detailPembelianRoute");
+const penjualanRoute = require("./routes/penjualanRoute");
+const detailPenjualanRoute = require("./routes/detailPenjualanRoute");
 
 const app = express();
 
@@ -16,6 +18,8 @@ app.use("/api/varian", varianRoute);
 app.use("/api/supplier", supplierRoute);
 app.use("/api/pembelian", pembelianRoute);
 app.use("/api/detailPembelian", detailPembelianRoute);
+app.use("/api/penjualan", penjualanRoute);
+app.use("/api/detailPenjualan", detailPenjualanRoute);
 
 app.listen(3000, () => {
     console.log("Server running on port 3000");
