@@ -7,6 +7,8 @@ const pembelianRoute = require("./routes/pembelianRoute");
 const detailPembelianRoute = require("./routes/detailPembelianRoute");
 const penjualanRoute = require("./routes/penjualanRoute");
 const detailPenjualanRoute = require("./routes/detailPenjualanRoute");
+const userRoute = require("./routes/userRoute");
+const authRoute = require("./routes/authRoute");
 
 const app = express();
 
@@ -20,6 +22,8 @@ app.use("/api/pembelian", pembelianRoute);
 app.use("/api/detailPembelian", detailPembelianRoute);
 app.use("/api/penjualan", penjualanRoute);
 app.use("/api/detailPenjualan", detailPenjualanRoute);
+app.use("/api/user", userRoute);
+app.use("/api/auth", authRoute);
 
 app.listen(3000, () => {
     console.log("Server running on port 3000");
