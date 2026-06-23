@@ -9,6 +9,8 @@ const penjualanRoute = require("./routes/penjualanRoute");
 const detailPenjualanRoute = require("./routes/detailPenjualanRoute");
 const userRoute = require("./routes/userRoute");
 const authRoute = require("./routes/authRoute");
+const dashboardRoute = require("./routes/dashboardRoute");
+const laporanRoute = require("./routes/laporanRoute")
 
 const app = express();
 
@@ -24,6 +26,8 @@ app.use("/api/penjualan", penjualanRoute);
 app.use("/api/detailPenjualan", detailPenjualanRoute);
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
+app.use("/api/dashboard", dashboardRoute);
+app.use("/api/laporan", laporanRoute);
 
 app.listen(3000, () => {
     console.log("Server running on port 3000");
