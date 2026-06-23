@@ -11,6 +11,8 @@ const userRoute = require("./routes/userRoute");
 const authRoute = require("./routes/authRoute");
 const dashboardRoute = require("./routes/dashboardRoute");
 const laporanRoute = require("./routes/laporanRoute")
+const marketplaceRoute = require("./routes/marketplaceRoute");
+const marketplaceProductRoute = require("./routes/marketplaceProductRoute")
 
 const app = express();
 
@@ -28,6 +30,8 @@ app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/dashboard", dashboardRoute);
 app.use("/api/laporan", laporanRoute);
+app.use("/api/marketplace", marketplaceRoute);
+app.use("/api/marketplace-product", marketplaceProductRoute);
 
 app.listen(3000, () => {
     console.log("Server running on port 3000");
